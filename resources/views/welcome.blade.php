@@ -7,14 +7,19 @@
   <title>shopid</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+  <link rel="stylesheet" href={{ asset('bs/css/bootstrap.min.css')}}> 
+
 </head>
 
 <body>
   
 <div class="container">
-  
+<div class="row">
+ <div class="col"><div class="dev">a</div></div>
+ <div class="col"><div class="dev">b</div></div>
+ <div class="col"><div class="dev">c</div></div>
+</div>
 </div>
 
 <script>
