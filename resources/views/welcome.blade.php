@@ -30,11 +30,11 @@ shopid.ir
 
 @foreach($products as $product)
 
- <div class="col"><div><a href="#{{$product['id']}}">{{$product['title']}}</a>
+ <div class="col"><div><a href="{{$product['path']}}">{{$product['title']}}</a>
  <br>
  <img src="{{$product['thumb']}}" style="max-width:100%">
  <br>
- {{$product['price']}}
+ {{number_format($product['price'])}}
  </div></div>
 @endforeach
 

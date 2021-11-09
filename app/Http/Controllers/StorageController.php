@@ -2,22 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\product;
+use App\Models\Storage;
 use Illuminate\Http\Request;
+use vladimirnetworks\curl\bencurl;
 
-class ProductController extends Controller
+class StorageController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-
-        $prods = Product::latest()->paginate(10, ['*'], 'page', $request->page);
-
-        return view("welcome",["products"=>$prods]);
+        //
     }
 
     /**
@@ -44,26 +42,28 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\product  $product
+     * @param  \App\Models\Storage  $storage
      * @return \Illuminate\Http\Response
      */
-    public function show($path)
+    public function show($filename)
     {
-       
-        $prod = Product::where('path','=',$path)->get();
-      
-        return view("welcome",["products"=>$prod]);
 
+        $ct[1] = "image/jpeg";
+
+        $storeage = Storage::where('path', '=', urlencode($filename))->first();
+        header("content-type: " . $ct[$storeage->contenttype]);
+        $f = new bencurl($storeage->origin);
+        echo $f->download();
 
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\product  $product
+     * @param  \App\Models\Storage  $storage
      * @return \Illuminate\Http\Response
      */
-    public function edit(product $product)
+    public function edit(Storage $storage)
     {
         //
     }
@@ -72,10 +72,10 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\product  $product
+     * @param  \App\Models\Storage  $storage
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, product $product)
+    public function update(Request $request, Storage $storage)
     {
         //
     }
@@ -83,10 +83,10 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\product  $product
+     * @param  \App\Models\Storage  $storage
      * @return \Illuminate\Http\Response
      */
-    public function destroy(product $product)
+    public function destroy(Storage $storage)
     {
         //
     }

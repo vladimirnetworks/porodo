@@ -14,3 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', "App\Http\Controllers\ProductController@index");
+
+
+Route::get('/{filepath}','App\Http\Controllers\StorageController@show')->where(
+    ['filepath'=>'.*\.jpg$']
+);
+
+
+Route::get('/{path}','App\Http\Controllers\ProductController@show');
