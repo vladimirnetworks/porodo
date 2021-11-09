@@ -10,15 +10,34 @@
 
   <link rel="stylesheet" href={{ asset('bs/css/bootstrap.min.css')}}> 
 
+<style>
+.dev {
+  border:1px solid black;
+}
+</style>
+
 </head>
 
 <body>
   
+
+<div class="p-4 p-md-5 mb-4 text-white bg-dark">
+shopid.ir
+</div>
+
 <div class="container">
 <div class="row">
- <div class="col"><div class="dev">a</div></div>
- <div class="col"><div class="dev">b</div></div>
- <div class="col"><div class="dev">c</div></div>
+
+@foreach($products as $product)
+
+ <div class="col"><div><a href="#{{$product['id']}}">{{$product['title']}}</a>
+ <br>
+ <img src="{{$product['thumb']}}" style="max-width:100%">
+ <br>
+ {{$product['price']}}
+ </div></div>
+@endforeach
+
 </div>
 </div>
 
