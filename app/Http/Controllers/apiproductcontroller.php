@@ -38,7 +38,7 @@ class apiproductcontroller extends Controller
 
             $photos[] = Storage::Insert([
 
-                "path"=>$request->path.".jpg"
+                "path"=>$request->path.".jpg",
                 "origin"=>$photo
 
             ]);
