@@ -17,7 +17,8 @@ class product extends Model
         "link",
         "shop",
         "caption",
-        "photos"
+        "photos",
+        "thumb"
 
     ];
 }
