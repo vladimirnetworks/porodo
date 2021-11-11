@@ -15,7 +15,8 @@ class product extends Model
         "title",
         "price",
         "link",
-        "shop"
+        "shop",
+        "caption"
 
     ];
 }
