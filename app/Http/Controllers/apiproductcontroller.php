@@ -45,7 +45,11 @@ class apiproductcontroller extends Controller
             ]);
         }
 
-        dd($photos);
+      
+
+        foreach ($photos as $photo) {
+          $pord_photo[] = $photo->path;
+        }
 
         product::create(
 
@@ -54,9 +58,12 @@ class apiproductcontroller extends Controller
                 "path"=>$request->path,
                 "title"=>$request->title,
                 "price"=>$request->price,
+                "thumb"=>$pord_photo[0],
                 "caption"=>$request->caption,
                 "link"=>$request->link,
-                "shop"=>$request->shop
+                "shop"=>$request->shop,
+                "photos"=>json_encode($pord_photo),
+
 
             ]
 
