@@ -14,6 +14,13 @@
 .dev {
   border:1px solid black;
 }
+body {
+  direction:rtl;
+}
+
+a,a:visited {
+  text-decoration:none;
+}
 </style>
 
 </head>
@@ -35,6 +42,12 @@ shopid.ir
  <img src="{{$product['thumb']}}" style="max-width:100%">
  <br>
  {{number_format($product['price'])}}
+ <br>
+
+@if(isset($inprodpage))
+ {{($product['caption'])}}
+@endif
+
  </div></div>
 @endforeach
 
