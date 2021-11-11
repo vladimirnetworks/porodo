@@ -62,6 +62,7 @@ class apiproductcontroller extends Controller
                 "caption"=>$request->caption,
                 "link"=>$request->link,
                 "shop"=>$request->shop,
+                "tags"=>$request->tags,
                 "photos"=>json_encode($pord_photo),
 
 
