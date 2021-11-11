@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\product;
+use App\Models\Storage;
 use Illuminate\Http\Request;
 
 class apiproductcontroller extends Controller
@@ -23,8 +24,28 @@ class apiproductcontroller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
+
+    
+
     public function store(Request $request)
     {
+
+
+        
+        foreach ($request->photos as $photo) {
+
+            $photos[] = Storage::Insert([
+
+                "path"=>$request->path.".jpg"
+                "origin"=>$photo
+
+            ]);
+        }
+
+        dd($photos);
+
         product::create(
 
             [
