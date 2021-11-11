@@ -10,6 +10,7 @@ class Storage extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['path','origin','contenttype'];
 
     public static function dupli($fname)
     {
