@@ -32,12 +32,12 @@ a,a:visited {
 shopid.ir
 </div>
 
-<div class="container">
+<div class="container-fluid">
 <div class="row">
 
 @foreach($products as $product)
 
- <div class="col"><div><a href="{{$product['path']}}">{{$product['title']}}</a>
+ <div class="col-sm-3"><div><a href="{{$product['path']}}">{{$product['title']}}</a>
  <br>
  <img src="{{$product['thumb']}}" style="max-width:100%">
  <br>
@@ -48,7 +48,8 @@ shopid.ir
  {{($product['caption'])}}
 @endif
 
- </div></div>
+ </div>
+ </div>
 @endforeach
 
 </div>
