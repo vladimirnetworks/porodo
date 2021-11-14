@@ -17,7 +17,17 @@ class ProductController extends Controller
 
         $prods = Product::latest()->paginate(10, ['*'], 'page', $request->page);
 
-        return view("welcome",["products"=>$prods]);
+        return view("index",["pageTitle"=>"shopid","products"=>$prods]);
+    }
+
+
+    public function index_test(Request $request)
+    {
+
+        return view("index",[
+            "pageTitle"=>"shopid",
+            "products"=>[["title"=>"aa"],["title"=>"aa"]]
+        ]);
     }
 
     /**
