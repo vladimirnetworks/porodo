@@ -13,6 +13,9 @@
 body {
   direction:rtl;
 }
+a,a:visited {
+  text-decoration:none;
+}
 </style>
 <body>
 
