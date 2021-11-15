@@ -1,5 +1,7 @@
 <div class="productItem">
 
-    {{$product->title}}
+    
+
+    <a href="{{$product->path}}">{{$product->title}}</a>
 
 </div>

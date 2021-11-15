@@ -62,7 +62,7 @@ class ProductController extends Controller
        
         $prod = Product::where('path','=',$path)->get();
       
-        return view("welcome",["products"=>$prod,"inprodpage"=>true]);
+        return view("singleProduct",["product"=>$prod[0],"pageTitle"=>$prod[0]->title]);
 
 
     }
