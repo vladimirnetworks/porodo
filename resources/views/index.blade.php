@@ -7,7 +7,7 @@
     <div class="row">
     @foreach($products as $product)
 
-        <div class="border border-dark col-sm-6 col-lg-3 p-2">@include('productItem')</div>
+        @include('productItem')
 
     @endforeach
     </div>
