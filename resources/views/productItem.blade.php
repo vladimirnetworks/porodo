@@ -1,5 +1,14 @@
 <div class="productItem">
 
-    <a class="text-primary" href="{{$product->path}}">{{$product->title}}</a>
+
+
+<a href="{{$product->path}}" class="d-block"><img class="mw-100" src="{{$product->thumb}}"></a>
+         
+         <a href="{{$product->path}}" class="d-block">{{$product->title}}</a>
+
+         
+         {{$product->price}}
+
+
 
 </div>
