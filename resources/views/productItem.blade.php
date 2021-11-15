@@ -2,6 +2,6 @@
 
     
 
-    <a href="{{$product->path}}">{{$product->title}}</a>
+    <a class="text-primary" href="{{$product->path}}">{{$product->title}}</a>
 
 </div>
