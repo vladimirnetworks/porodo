@@ -19,8 +19,8 @@ a,a:visited {
 </style>
 <body>
 
-<div class="p-4 p-md-5 mb-4 text-white bg-dark">
-shopid.ir
+<div class="p-0 p-md-4 p-lg-5 text-white bg-dark text-center text-md-end">
+shopid
 </div>
 
 
